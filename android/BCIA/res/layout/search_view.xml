@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="594dp"
+  android:layout_height="431dp"
+  android:background="@drawable/search_bg">
+	<Button
+  		android:layout_width="75dp"
+  		android:layout_height="33dp"
+  		android:background="@drawable/conformcl_btn"
+  		android:id="@+id/search_condition_clear_btn"
+  		android:layout_marginTop="8dp"
+  		android:layout_alignParentLeft="true"
+  		android:layout_marginLeft="15dp"
+  	/>
+  	<Button
+  		android:layout_width="75dp"
+  		android:layout_height="33dp"
+  		android:background="@drawable/conform_btn"
+  		android:id="@+id/search_condition_sub_btn"
+  		android:layout_marginTop="8dp"
+  		android:layout_alignParentRight="true"
+  		android:layout_marginRight="15dp"
+  	/>
+  
+<RelativeLayout
+  	android:layout_width="wrap_content"
+  	android:layout_height="wrap_content"
+  	android:layout_marginTop="75dp"
+  	android:id="@+id/flight_choose_body"
+  	android:layout_centerHorizontal="true"
+  >
+	 
+	  <EditText
+	  	android:layout_width="190dp"
+	  	android:layout_height="wrap_content"
+	  	android:layout_centerHorizontal="true"
+	  	android:id="@+id/search_condition_date_text"
+	  />
+	
+	  <EditText
+	  	android:layout_width="190dp"
+	  	android:layout_height="wrap_content"
+	  	android:layout_marginTop="18dp"
+	  	android:layout_alignLeft="@+id/search_condition_date_text"
+	  	android:layout_below="@id/search_condition_date_text"
+	  	android:id="@+id/search_condition_plane_num_text"
+	  />
+	  
+	  <EditText
+	  	android:layout_width="190dp"
+	  	android:layout_height="wrap_content"
+	  	android:layout_marginTop="18dp"
+	  	android:layout_alignLeft="@+id/search_condition_date_text"
+	  	android:layout_below="@id/search_condition_plane_num_text"
+	  	android:id="@+id/search_condition_plane_text"
+	  	android:inputType="textCapCharacters"
+	  />
+	  
+	  <EditText
+	  	android:layout_width="190dp"
+	  	android:layout_height="wrap_content"
+	  	android:layout_marginTop="18dp"
+	  	android:layout_alignLeft="@+id/search_condition_date_text"
+	  	android:layout_below="@id/search_condition_plane_text"
+		android:id="@+id/search_condition_schedule_num_text"
+		android:capitalize="characters"
+		android:inputType="textCapCharacters"
+	  />
+	  
+	  <EditText
+	  	android:layout_width="190dp"
+	  	android:layout_height="wrap_content"
+	  	android:layout_marginTop="18dp"
+	  	android:layout_alignLeft="@+id/search_condition_date_text"
+	  	android:layout_below="@id/search_condition_schedule_num_text"
+	  	android:id="@+id/search_condition_company_text"
+	  	android:capitalize="characters"
+	  />
+ 
+  	</RelativeLayout>
+  </RelativeLayout>

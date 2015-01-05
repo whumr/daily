@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, List_demoActivity!</string>
+    <string name="app_name">List_demo</string>
+	
+    <string name="search1">\"abc\"的搜索结果</string>
+    <string name="search2">在\"123\"中搜索\"abc\"的结果</string>
+        
+</resources>

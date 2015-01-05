@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+<RelativeLayout
+    android:layout_height="69dp"
+    android:layout_width="1280dp"
+    android:id="@+id/help_title"
+    android:background="@drawable/title_bg"
+    >
+    <ImageView
+     	android:layout_width="75dp"
+     	android:layout_height="33dp"
+     	android:id="@+id/back_button" 
+     	android:background="@drawable/back_btn" 
+     	android:layout_alignParentLeft="true"
+     	android:layout_marginLeft="10dp"
+     	android:layout_centerVertical="true"
+     />
+</RelativeLayout>
+<WebView 
+    android:layout_width="1280dp" 
+    android:layout_height="3985dp" 
+    android:layout_below="@id/help_title" 
+    android:id="@+id/help_img" /> 
+</RelativeLayout>

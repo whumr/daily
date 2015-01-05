@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- 表头样式 -->
+	<style name="tableHeadText">
+		<item name="android:textSize">18sp</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:gravity">center</item>
+	</style>
+	<!-- 分割线样式 -->
+	<style name="seprateLine">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">0.2dip</item>
+		<item name="android:background">#808080</item>
+	</style>
+</resources>

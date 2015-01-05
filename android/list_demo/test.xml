@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<apps>
+	<app>
+		<picture>a.jpg</picture>
+		<score>3</score>
+		<name>大时代</name>
+		<author>中国移动</author>
+		<price>2</price>
+		<type>MM应用</type>
+		<viewNum>1238</viewNum>
+		<description>发生的菲拉斯的减肥快乐是</description>
+	</app>
+	<app>
+		<picture>a.jpg</picture>
+		<score>3</score>
+		<name>放放风</name>
+		<author>中国移动</author>
+		<price>1</price>
+		<type>MM应用</type>
+		<viewNum>53432</viewNum>
+		<description>额问题问题是的发生的</description>
+	</app>
+</apps>

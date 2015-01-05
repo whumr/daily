@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, BaseActivity!</string>
+    <string name="app_name">BCIA</string>
+    <string name="title">B3246航班信息录入</string>
+    <string name="decie_site">除冰机位</string>
+    <string name="arrive_time">到达等待时间</string>
+    <string name="lead_dicing">开始引导时间</string>
+    <string name="arrive_dicing">进入引导时间</string>
+    <string name="start_dicing">除冰开始时间</string>
+    <string name="end_dicing">除冰结束时间</string>
+    <string name="start_drive">启动开车时间</string>
+    <string name="out_drive">滑出除冰点时间</string>
+    <string name="user_login">确定</string> 
+  	<string name="user_clean">清空</string> 
+ 	<string name="user_password">密码：</string> 
+  	<string name="user_name">用户名：</string> 
+    <string name="user_name_is_empty">用户名不能为空</string>
+    <string name="password_is_empty">密码不能为空</string> 
+    <string name="login_ing">登陆验证中，请稍后...</string> 
+    <string name="full_screen_loading">数据加载中...</string>
+    <string name="cancel">取消</string>
+</resources>

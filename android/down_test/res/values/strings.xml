@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, Down_testActivity!</string>
+    <string name="app_name">Down_test</string>
+
+    <string name="down_url">http://download.taobaocdn.com/wangwang/AliIM2011_taobao(7.00.07C).exe</string>
+    <string name="down_file">taobao.exe</string>
+
+</resources>

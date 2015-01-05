@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_height="579dp" 
+				android:layout_width="947dp" 
+				android:orientation="vertical"
+				android:background="@drawable/input_bg">
+		
+		<RelativeLayout android:id="@+id/info_record_input_title_layout"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content">
+				<Button 
+					android:id="@+id/info_record_input_clear_btn"
+					android:layout_height="33dp"
+					android:layout_width="75dp" 
+					android:layout_alignParentLeft="true" 
+					android:background="@drawable/conformcl_btn"
+					android:layout_marginTop="8dp"
+  					android:layout_marginLeft="15dp" />
+				<TextView android:layout_height="wrap_content"
+					android:layout_width="wrap_content" 
+					android:layout_centerInParent="true"
+					android:layout_marginTop="5dp"
+					android:textSize="35dp"
+					android:id="@+id/info_record_title" 
+					android:textColor="@color/white"/>
+				<Button
+					android:id="@+id/info_record_input_confirm_btn" 
+					android:layout_height="33dp"
+					android:layout_width="75dp" 
+					android:background="@drawable/conform_btn"
+					android:layout_marginTop="8dp"
+  					android:layout_alignParentRight="true"
+  					android:layout_marginRight="15dp"/>
+
+			</RelativeLayout>
+
+		
+		<RelativeLayout android:id="@+id/info_record_input_btnline_layout"
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:gravity="right"
+			android:layout_below="@+id/info_record_input_title_layout"
+			android:layout_marginTop="5dp"
+			android:layout_marginRight="20dp">
+			<Button android:layout_width="44dp" 
+				android:layout_height="45dp"
+				android:id="@+id/info_record_input_one" 
+				android:text="1"
+				android:textSize="24dp"
+				android:layout_toLeftOf="@+id/info_record_input_two" 
+				android:visibility="invisible"/>
+			<Button android:id="@+id/info_record_input_two"
+				android:layout_width="44dp" 
+				android:layout_height="45dp" 
+				android:text="2"
+				android:textSize="24dp"
+				android:layout_toLeftOf="@+id/info_record_input_three"
+				android:visibility="invisible"
+				android:layout_marginLeft="15dp"/>	
+			<Button android:layout_width="44dp" 
+				android:layout_height="45dp"
+				android:id="@+id/info_record_input_three" 
+				android:text="3" 
+				android:textSize="24dp"
+				android:layout_alignParentRight="true"
+				android:visibility="invisible"
+				android:layout_marginLeft="15dp"/>
+			
+		</RelativeLayout>
+		<RelativeLayout android:id="@+id/info_record_input_infoin_layout" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/info_record_input_btnline_layout"
+			android:layout_marginTop="20dp">			
+				<Spinner android:id="@+id/info_record_input_deice_site_info"
+					android:layout_width="216dp" 
+					android:layout_height="45dp" 
+					android:layout_marginTop="15dp"
+					android:layout_marginLeft="190dp"/>			
+				<EditText android:id="@+id/info_record_input_arrive_site_time_edit"
+					android:layout_width="216dp" 
+					android:layout_height="45dp"
+					android:layout_toRightOf="@+id/info_record_input_deice_site_info"
+					android:layout_marginLeft="260dp"
+					android:layout_alignTop="@+id/info_record_input_deice_site_info"
+					android:inputType="date"
+					/>
+				<Button android:id="@+id/info_record_input_arrive_site_time_edit_time"
+					android:layout_width="44dp" 
+					android:layout_height="44dp"
+					android:layout_toRightOf="@+id/info_record_input_arrive_site_time_edit"
+					android:layout_alignTop="@+id/info_record_input_deice_site_info"
+					android:background="@drawable/time_pick_btn"/>
+
+				<EditText android:id="@+id/info_record_input_lead_dicing_edit"
+					android:layout_height="45dp" 
+					android:layout_width="216dp"
+					android:layout_alignLeft="@+id/info_record_input_deice_site_info"
+					android:layout_below="@+id/info_record_input_deice_site_info"
+					android:layout_marginTop="15dp"
+					android:inputType="date"
+					 />
+				<Button android:id="@+id/info_record_input_lead_dicing_edit_time"
+					android:layout_width="44dp" 
+					android:layout_height="44dp"
+					android:layout_toRightOf="@+id/info_record_input_lead_dicing_edit"
+					android:layout_alignTop="@+id/info_record_input_lead_dicing_edit"
+					android:background="@drawable/time_pick_btn"/>				
+				<EditText android:id="@+id/info_record_input_arrive_dicing_edit"
+					android:layout_width="216dp" 
+					android:layout_height="45dp"
+					android:layout_alignLeft="@+id/info_record_input_arrive_site_time_edit"
+					android:layout_alignTop="@+id/info_record_input_lead_dicing_edit"
+					android:inputType="date"
+					 />
+				<Button android:id="@+id/info_record_input_arrive_dicing_edit_time"
+					android:layout_width="44dp" 
+					android:layout_height="44dp"
+					android:layout_toRightOf="@+id/info_record_input_arrive_dicing_edit"
+					android:layout_alignTop="@+id/info_record_input_lead_dicing_edit" 
+					android:background="@drawable/time_pick_btn"/>
+					
+				<EditText android:id="@+id/info_record_input_start_dicing_edit"
+					android:layout_width="216dp" 
+					android:layout_height="45dp"
+					android:layout_alignLeft="@+id/info_record_input_lead_dicing_edit"
+					android:layout_below="@+id/info_record_input_lead_dicing_edit"
+					android:layout_marginTop="18dp"
+					android:inputType="date"
+				 />
+				<Button android:id="@+id/info_record_input_start_dicing_edit_time"
+					android:layout_width="44dp" 
+					android:layout_height="44dp"
+					android:layout_toRightOf="@+id/info_record_input_start_dicing_edit"
+					android:layout_alignTop="@+id/info_record_input_start_dicing_edit"
+					android:background="@drawable/time_pick_btn"/>				
+				<EditText android:id="@+id/info_record_input_end_dicing_edit"
+					android:layout_width="216dp" 
+					android:layout_height="45dp"
+					android:layout_alignTop="@+id/info_record_input_start_dicing_edit"
+					android:layout_alignLeft="@+id/info_record_input_arrive_dicing_edit"
+					android:inputType="date"
+				 />
+				<Button android:id="@+id/info_record_input_end_dicing_edit_time"
+					android:layout_width="44dp" 
+					android:layout_height="44dp"
+					android:layout_alignTop="@+id/info_record_input_start_dicing_edit"
+					android:layout_toRightOf="@+id/info_record_input_end_dicing_edit" 
+					android:background="@drawable/time_pick_btn"/>		
+				<EditText android:id="@+id/info_record_input_start_drive_edit"
+					android:layout_width="216dp" 
+					android:layout_height="45dp"
+					android:layout_below="@+id/info_record_input_start_dicing_edit"
+					android:layout_marginTop="18dp"
+					android:layout_alignLeft="@+id/info_record_input_start_dicing_edit"
+					android:inputType="date"
+				 />
+				<Button android:id="@+id/info_record_input_start_drive_edit_time"
+					android:layout_width="44dp" 
+					android:layout_height="44dp"
+					android:layout_toRightOf="@+id/info_record_input_start_drive_edit"
+					android:layout_alignTop="@+id/info_record_input_start_drive_edit"
+					android:background="@drawable/time_pick_btn" />				
+				<EditText android:id="@+id/info_record_input_out_drive_edit"
+					android:layout_width="216dp" 
+					android:layout_height="45dp"
+					android:layout_alignTop="@+id/info_record_input_start_drive_edit"
+					android:layout_alignLeft="@+id/info_record_input_end_dicing_edit"
+					android:inputType="date"
+					/>
+				<Button android:id="@+id/info_record_input_out_drive_edit_time"
+					android:layout_width="44dp" 
+					android:layout_height="44dp" 
+					android:layout_alignTop="@+id/info_record_input_start_drive_edit"
+					android:layout_alignLeft="@+id/info_record_input_end_dicing_edit_time"
+					android:background="@drawable/time_pick_btn"/>
+					
+		</RelativeLayout>
+
+
+		<TimePicker android:layout_height="wrap_content"
+				android:layout_width="wrap_content" 
+				android:layout_x="20px"
+				android:layout_y="10px" 
+				android:id="@+id/info_record_input_time_picker"
+				android:layout_below="@+id/info_record_input_infoin_layout"
+				android:layout_marginTop="20dp"
+				android:layout_centerHorizontal="true"/>
+			
+	</RelativeLayout>
+

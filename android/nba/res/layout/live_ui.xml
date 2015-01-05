@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	
+	<!-- 标题 -->
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		<!-- 比赛状态 -->
+		<TextView android:id="@+id/live_matchStatusText"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"/>
+		<RelativeLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/live_matchStatusText">
+			<!-- 主队 -->
+			<TextView android:id="@+id/live_homeTeamText"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_marginLeft="5dip"/>
+			<ImageView android:layout_height="40dip" 
+				android:layout_width="40dip"
+				android:id="@+id/live_homeTeamImage"
+				android:layout_toRightOf="@id/live_homeTeamText"/>
+			<!-- 比分概述 -->
+			<TextView android:id="@+id/live_scoreDetailText"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"/>
+			<!-- 主队总分 -->
+			<TextView android:id="@+id/live_homeScoreText"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_toLeftOf="@id/live_scoreDetailText"
+				android:layout_marginRight="2dip"/>
+			<!-- 客队总分 -->
+			<TextView android:id="@+id/live_awayScoreText"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_toRightOf="@id/live_scoreDetailText"
+				android:layout_centerVertical="true"/>
+			<!-- 客队 -->
+			<TextView android:id="@+id/live_awayTeamText"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:layout_marginRight="5dip"/>
+			<ImageView android:id="@+id/live_awayTeamImage" 
+				android:layout_height="40dip" 
+				android:layout_width="40dip"
+				android:layout_toLeftOf="@id/live_awayTeamText"/>
+		</RelativeLayout>
+	</RelativeLayout>
+	
+	<!-- 比分表 -->
+	<ScrollView android:layout_width="fill_parent" 
+		android:scrollbars="vertical" 
+        android:fadingEdge="vertical" 
+		android:layout_height="wrap_content">
+		<LinearLayout android:layout_width="match_parent"
+			android:layout_height="fill_parent">
+			<TextView android:id="@+id/live_scoreText"
+				android:layout_width="fill_parent" 
+			    android:layout_height="wrap_content"/>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

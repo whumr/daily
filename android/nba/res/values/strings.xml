@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NBA文字直播</string>
+    <string name="hello">欢迎收看NBA比分文字直播</string>
+    
+    <string name="mainActivity">com.android.nba.NBAActivity</string>
+    <string name="liveActivity">com.android.nba.LiveActivity</string>
+</resources>

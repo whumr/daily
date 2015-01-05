@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" 
+	android:layout_height="140dip"
+	android:background="@color/white"
+	android:orientation="horizontal">
+	<!-- 图片 -->
+    <LinearLayout android:layout_width="200dip" 
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical"
+		android:orientation="vertical">
+		<ImageView android:id="@+id/appImage"
+			android:layout_height="100dip" 
+			android:layout_width="100dip" />
+		<ImageView android:id="@+id/appScoreImage"
+			android:layout_height="30dip" 
+			android:layout_width="100dip" />
+	</LinearLayout>
+	<!-- 名称 -->
+    <LinearLayout android:layout_width="300dip" 
+		android:layout_height="fill_parent"
+		android:gravity="center_vertical"
+		android:layout_marginLeft="20dip"
+		android:orientation="vertical">
+		<LinearLayout android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<TextView android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        style="@style/appText"
+		        android:text="名称：" />
+			<TextView android:id="@+id/appNameText" 
+			    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"/>
+		</LinearLayout>
+		<LinearLayout android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<TextView android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        style="@style/appText"
+		        android:text="提供商：" />
+			<TextView android:id="@+id/appAuthorText" 
+			    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"/>
+		</LinearLayout>
+		<LinearLayout android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<TextView android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        style="@style/appText"
+		        android:text="详情介绍：" />
+			<TextView android:id="@+id/appDescriptionText" 
+			    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"/>
+		</LinearLayout>
+	</LinearLayout>
+	<!-- 价格 -->
+    <LinearLayout android:layout_width="300dip" 
+		android:layout_height="fill_parent"
+		android:gravity="center_vertical"
+		android:layout_marginLeft="20dip"
+		android:orientation="vertical">
+		<LinearLayout android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<TextView android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        style="@style/appText"
+		        android:text="价格：" />
+			<TextView android:id="@+id/appPriceText" 
+			    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"/>
+		</LinearLayout>
+		<LinearLayout android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<TextView android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        style="@style/appText"
+		        android:text="类别：" />
+			<TextView android:id="@+id/appTypeText" 
+			    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"/>
+		</LinearLayout>
+		<LinearLayout android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<TextView android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        style="@style/appText"
+		        android:text="被浏览次数：" />
+			<TextView android:id="@+id/appViewNumberText" 
+			    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"/>
+		</LinearLayout>
+	</LinearLayout>
+	<!-- 订购 -->
+    <LinearLayout android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:gravity="center_vertical"
+		android:layout_marginLeft="20dip"
+		android:orientation="horizontal">
+		<Button android:id="@+id/appOrderButton"
+		    android:text="+ 订购"
+			android:layout_width="fill_parent"
+	  		android:layout_height="56dp"
+	  		android:layout_centerVertical="true" />
+	</LinearLayout>
+</LinearLayout>
