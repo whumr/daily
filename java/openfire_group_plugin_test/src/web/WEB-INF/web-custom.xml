@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+    <servlet>
+        <servlet-class>com.blossom.test.TestServlet</servlet-class>
+        <servlet-name>TestServlet</servlet-name>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>TestServlet</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-class>org.logicalcobwebs.proxool.admin.servlet.AdminServlet</servlet-class>
+        <servlet-name>ProxoolServlet</servlet-name>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>ProxoolServlet</servlet-name>
+        <url-pattern>/p</url-pattern>
+    </servlet-mapping>
+</web-app>

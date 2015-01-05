@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin>
+    <class>com.blossom.test.TestPlugin</class>
+    <name>TestPlugin</name>
+    <description>test openfire plugin.</description>
+    <author>ming rui</author>
+    <version>0.0.1</version>
+    <date>4/19/2010</date>
+    <url>http://www.igniterealtime.org</url>
+    <minServerVersion>3.7.0</minServerVersion>
+</plugin>

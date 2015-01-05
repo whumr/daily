@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>strophe test</title>
+<link href="css/base.css" rel="stylesheet" type="text/css"/>
+<link href="css/base/jquery.ui.all.css" rel="stylesheet" type="text/css"/>
+<link href="css/demos.css" rel="stylesheet" type="text/css"/>
+
+<script src='js/jquery-1.7.2.min.js'></script>
+<script src='js/ui/jquery.ui.core.js'></script>
+<script src='js/ui/jquery.ui.widget.js'></script>
+<script src='js/ui/jquery.ui.accordion.js'></script>
+<script src='js/ui/jquery.ui.tabs.js'></script>
+<script src='js/strophe.js'></script>
+<script src='basic.js'></script>
+</head>
+<body>
+	<div id='login'>
+		<form name='cred'>
+			<label for='jid'>JID:</label> <input type='text' id='jid'
+				value="mr1@mr.cn" /> <label for='pass'>Password:</label> <input
+				type='password' id='pass' value="mr" /> <input type='button'
+				id='connect' value='connect' />
+		</form>
+	</div>
+
+	<hr />
+	<!-- 好友列表 -->
+	<div class="div_frame" id="main_frame">
+		<p>好友</p>
+		<div id="friends_list"></div>
+		<p>群</p>
+		<div id="groups_list"></div>
+	</div>
+	<!-- 群成员列表 -->
+	<div class="div_frame">
+		<ul id="member_list">
+		</ul>
+	</div>
+	
+	<!-- 群聊记录 -->
+	<div id="group_his" class="div_frame" style="width: 700px;">
+		<ul id="group_his_title">
+		</ul>
+	</div>
+	
+	<hr style="clear: left;"/>
+	<!-- 群聊输入 -->
+	<div id="chat_div" class="div_frame" style="width: 500px;border: none;">
+		<label for="chat_jid">发送到:</label>
+		<input type="text" id="chat_jid" value="" /> <br />
+		<textarea id="chat_msg" rows="10" cols="80" class="multibox"></textarea>
+		<input type="button" id="chat_send" value="发送" />
+		<input type="button" id="create_group" value="新建群" />
+		<input type="button" id="join_group" value="加入群" />
+	</div>
+
+	<hr style="clear: left;"/>
+
+	<div style="height: 220px;margin-top: 20px;">
+		<div id='log'></div>
+
+		<div style="width: 800px; height: 200px; float: right;">
+			<textarea id="message" rows="10" cols="150" class="multibox"></textarea>
+			<input type="button" id="get_roster" value="get roster" /> <input
+				type="button" id="get_disco" value="get disco" /> <input
+				type="button" id="send_test" value="send test" />
+		</div>
+	</div>
+
+	<hr />
+	<div style="height: 220px;">
+		<div id="his"></div>
+		<input type="button" value="clear" onclick="$('#his').empty();" />
+		
+		<div id="inputarea">
+			<label for='tojid'>TOJID:</label> <input type='text' id='tojid'
+				value="mr1@mr.cn" /> <br />
+			<textarea id="msg" rows="10" cols="80" class="multibox"></textarea>
+			<input type="button" id="send" value="send" />
+		</div>
+	</div>
+</body>
+</html>

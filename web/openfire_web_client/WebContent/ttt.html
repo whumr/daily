@@ -1,0 +1,61 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<title>添加博客</title>
+		<script type="text/javascript" src="jquery-1.10.1.min.js"></script>
+		<script type="text/javascript" src="jquery.validate.min.js"></script>
+		<script type="text/javascript">
+			$().ready(function(){  
+				$("#form_sample_1").validate({  
+					rules:{
+						title:{
+							required:true,
+							minlength:2
+						},
+						content: "required"
+					},
+					messages: {
+						title: {
+							required: "title不能为空",
+							minlength: "title长度不能少于2个字节"
+						},
+						content: "content不能为空"
+					}
+				});  
+			});
+		</script>
+		<style type="text/css">
+			label.error {
+				display: inline;
+				margin-left: 10px;
+				width: auto;
+				color: #FF0000;
+				font-style: italic;
+			}
+		</style>
+	</head>
+<body>
+
+	<form action="#" id="form_sample_1">
+		<div>
+			<label>Name<span >*</span></label>
+			<div>
+				<input type="text" id="title" name="title"/>
+			</div>
+		</div>
+
+		<div>
+			<label>Email<span>*</span></label>
+			<div>
+				<input id="content" name="content" type="text"/>
+			</div>
+		</div>
+		
+		<div>
+			<button type="submit">Validate</button>
+			<button type="button">Cancel</button>
+		</div>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+	
+		if (!Function.prototype.bind) {
+		    Function.prototype.bind = function (obj /*, arg1, arg2, ... */)
+		    {
+		        var func = this;
+		        var _slice = Array.prototype.slice;
+		        var _concat = Array.prototype.concat;
+		        var _args = _slice.call(arguments, 1);
+		        
+		        return function () {
+		            return func.apply(obj ? obj : this,
+		                              _concat.call(_args,
+		                                           _slice.call(arguments, 0)));
+		        };
+		    };
+		    alert ('bind');
+		}
+		
+		function a(x) {
+			var z = 10;
+			var b = function(y) {
+				alert(y + z);
+			}.bind(this, x);
+			b();
+		}
+	
+		//a(12);
+		
+		function x() {
+			var x = c();
+			alert(x);
+		}
+		function c() {
+			return confirm('xx');
+		}
+	</script>
+	
+	<button onclick="x()">sssss</button>
+</body>
+</html>

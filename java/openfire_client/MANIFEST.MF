@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: com.blossom.client.ui.Login
+Class-Path: lib/smack.jar 
+ lib/smackx.jar 

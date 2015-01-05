@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>strophe test</title>
+<link href="css/base.css" rel="stylesheet" type="text/css"/>
+<link href="css/base/jquery.ui.all.css" rel="stylesheet" type="text/css"/>
+<link href="css/demos.css" rel="stylesheet" type="text/css"/>
+
+<script src='js/jquery-1.7.2.min.js'></script>
+<script src='js/ui/jquery.ui.core.js'></script>
+<script src='js/ui/jquery.ui.widget.js'></script>
+<script src='js/ui/jquery.ui.accordion.js'></script>
+<script src='js/strophe.js'></script>
+<script src='basic.js'></script>
+</head>
+<body>
+	<div id='login'>
+		<form name='cred'>
+			<label for='jid'>JID:</label> <input type='text' id='jid'
+				value="mr1@mr.cn" /> <label for='pass'>Password:</label> <input
+				type='password' id='pass' value="mr" /> <input type='button'
+				id='connect' value='connect' />
+		</form>
+	</div>
+
+	<hr />
+	<!-- 好友列表 -->
+	<div class="div_frame" id="main_frame">
+		<p>好友</p>
+		<div id="friends_list"></div>
+		<p>群</p>
+		<div id="groups_list"></div>
+	</div>
+	<!-- 群成员列表 -->
+	<div class="div_frame">
+		<ul id="member_list">
+		</ul>
+	</div>
+	
+	<!-- 群聊记录 -->
+	<div id="chat_div">
+	</div>
+	
+	<div style="clear: left;">
+		<div id="log_div"></div><button onclick="clearLog()" style="float: left;">clear</button>
+		<div style="height: 200px;"><textarea id="msg"></textarea><button id="send">send</button></div>
+	</div>
+</body>
+</html>
