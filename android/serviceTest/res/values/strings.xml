@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World!</string>
+    <string name="app_name">serviceTest</string>
+    
+    <string-array name="activity_array">
+		<item>TimeServiceActivity</item>
+	</string-array>
+	
+    <string-array name="class_array">
+		<item>test.service.activity.TimeServiceActivity</item>
+	</string-array>
+</resources>

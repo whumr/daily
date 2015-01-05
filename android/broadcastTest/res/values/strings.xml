@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, BroadcastActivity!</string>
+    <string name="app_name">broadcastTest</string>
+    
+    <string-array name="activity_array">
+		<item>BroadcastActivity</item>
+		<item>LaunchNotificationActivity</item>
+		<item>ShowBottomActivty</item>
+	</string-array>
+	
+    <string-array name="class_array">
+		<item>test.broadcasttest.activity.BroadcastActivity</item>
+		<item>test.broadcasttest.activity.LaunchNotificationActivity</item>
+		<item>test.broadcasttest.activity.ShowBottomActivty</item>
+	</string-array>
+</resources>

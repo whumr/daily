@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>protocol_config</comment>
+	<entry key="101">com.ming.server.common.domain.protocols.Request_101,com.ming.server.common.domain.protocols.Response_101</entry>
+</properties>

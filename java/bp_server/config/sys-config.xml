@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>system_config</comment>
+	<entry key="default_charset">UTF-8</entry>
+	<entry key="default_version">101</entry>
+	<entry key="protocol_config">config\protocol-config.xml</entry>
+	<entry key="protocol_util_config">config\protocolUtil-config.xml</entry>
+	<entry key="log4j_config">config\log4j.xml</entry>
+</properties>

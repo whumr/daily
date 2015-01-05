@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+	xmlns:match="http://schemas.android.com/apk/res/test.tab"
+	
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+	
+<TableLayout android:layout_width="fill_parent" 
+	android:layout_height="wrap_content"
+	android:id="@+id/tableA_tl"
+	android:stretchColumns="1,2">
+	
+	<TableRow>
+		<TextView android:text="比赛状态" android:layout_weight="1" style="@style/tableHeadText"/>
+		<TextView android:text="对阵" android:layout_weight="2" style="@style/tableHeadText"/>
+		<TextView android:text="比分" android:layout_weight="2" style="@style/tableHeadText"/>
+	</TableRow>
+	
+	<test.tab.MatchRow match:mid="111">
+		<TextView android:text="直播中"
+		android:textColor="#00FF00" android:layout_gravity="center_vertical" android:gravity="center"/>
+		<TableLayout android:layout_span="2" 
+			android:stretchColumns="0,1" 
+			android:shrinkColumns="0,1">
+			<TableRow>
+				<TextView android:text="达拉斯小牛111111111111111111111111111111111" android:minWidth="200dip"/>
+				<TextView android:text="95 (22 36 24 26)"  android:gravity="center" android:minWidth="200dip"/>
+			</TableRow>
+			<TableRow>
+				<TextView android:layout_span="2" android:gravity="right" 
+				android:text="诺维斯基 (35分 10篮板 10助攻)2222222222222222222222222222" 
+				android:paddingRight="10dip"/>
+			</TableRow>
+				<View style="@style/seprateLine"/>
+			<TableRow>
+				<TextView android:text="俄克拉荷马雷霆"/>
+				<TextView android:text="95 (22 36 24 26)333333333333333333333333"/>
+			</TableRow>
+			<TableRow>
+				<TextView android:layout_span="2" android:gravity="right" 
+				android:text="杜兰特 (28分 14篮板 5助攻)" android:paddingRight="10dip"/>
+			</TableRow>
+		</TableLayout>
+	</test.tab.MatchRow>
+	
+	<test.tab.MatchRow match:mid="222">
+		<TextView android:text="直播中"
+		android:textColor="#00FF00" android:gravity="center"/>
+		<TableLayout android:layout_span="2" 
+			android:stretchColumns="0,1" 
+			android:shrinkColumns="0,1">
+			<TableRow>
+				<TextView android:text="达拉斯小牛" android:minWidth="200dip"/>
+				<TextView android:text="95 (22 36 24 26)"  android:gravity="center" android:minWidth="200dip"/>
+			</TableRow>
+			<TableRow>
+				<TextView android:layout_span="2" android:gravity="right" 
+				android:text="诺维斯基 (35分 10篮板 10助攻)2222222222222222222222222222" 
+				android:paddingRight="10dip"/>
+			</TableRow>
+				<View style="@style/seprateLine"/>
+			<TableRow>
+				<TextView android:text="俄克拉荷马雷霆"/>
+				<TextView android:text="95 (22 36 24 26)333333333333333333333333"/>
+			</TableRow>
+			<TableRow>
+				<TextView android:layout_span="2" android:gravity="right" 
+				android:text="杜兰特 (28分 14篮板 5助攻)" android:paddingRight="10dip"/>
+			</TableRow>
+		</TableLayout>
+	</test.tab.MatchRow>
+</TableLayout>
+
+
+    <View style="@style/seprateLine"
+        android:layout_height="2dip"/> 
+
+
+<TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:stretchColumns="1">
+	<TableRow>
+		<TextView android:text="达拉斯小牛" android:gravity="center"/>
+		<TextView android:text="95 (22 36 24 26)" android:gravity="right"/>
+	</TableRow>
+	<TableRow android:layout_width="fill_parent">
+		<TextView android:layout_span="2" android:gravity="right"  android:layout_width="fill_parent"
+		android:text="诺维斯基 (35分 10篮板 10助攻)"/>
+	</TableRow>
+
+	<TableRow android:layout_width="fill_parent">
+		<TextView android:text="达拉斯小牛" android:gravity="center"/>
+		<TextView android:text="95 (22 36 24 26)" android:gravity="right"/>
+	</TableRow>
+	<TableRow android:layout_width="fill_parent">
+		<TextView android:layout_span="2" android:gravity="right"  android:layout_width="fill_parent"
+		android:text="杜兰特 (28分 14篮板 5助攻)"/>
+	</TableRow>
+</TableLayout>
+
+    <View style="@style/seprateLine"/> 
+
+<TextView android:gravity="right"  android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:text="诺维斯基 (35分 10篮板 10助攻)"/>
+		
+</LinearLayout>

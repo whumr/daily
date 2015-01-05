@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, TabActivity!</string>
+    <string name="app_name">TabTest</string>
+    <string name="view">查看</string>
+    
+    <string-array name="countries_array">
+		<item>Bahrain</item>
+		<item>Bangladesh</item>
+		<item>Barbados</item>
+		<item>Belarus</item>
+		<item>Belgium</item>
+		<item>Belize</item>
+		<item>Benin</item>
+	</string-array>
+	
+    <string-array name="activity_array">
+		<item>SQLActivity</item>
+		<item>TabTestActivity</item>
+		<item>UIActivity</item>
+		<item>ListTestActivity</item>
+		<item>ListTestActivity2</item>
+		<item>CallBackTabActivity</item>
+		<item>CallBackListActivity</item>
+		<item>TableActivity</item>
+		<item>ListTableActivity</item>
+		<item>DymanicTableRowActivity</item>
+	</string-array>
+	
+    <string-array name="class_array">
+		<item>test.tab.sql.SQLActivity</item>
+		<item>test.tab.TabTestActivity</item>
+		<item>test.tab.UIActivity</item>
+		<item>test.tab.ListTestActivity</item>
+		<item>test.tab.ListTestActivity2</item>
+		<item>test.tab.CallBackTabActivity</item>
+		<item>test.tab.CallBackListActivity</item>
+		<item>test.tab.TableActivity</item>
+		<item>test.tab.ListTableActivity</item>
+		<item>test.tab.DymanicTableRowActivity</item>
+	</string-array>
+</resources>

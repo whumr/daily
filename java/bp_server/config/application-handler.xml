@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context
+			http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="userHandler" class="com.ming.server.user.handler.v101.UserMessageHandlerImpl">
+		<property name="userService" ref="userService" />
+	</bean>
+
+	<bean id="handlerMap" class="com.ming.server.handler.HandlerMap">
+		<property name="map">
+			<map>
+				<!-- create user -->
+				<entry key="1" value="userHandler,createUser" />
+			</map>
+		</property>
+	</bean>
+
+</beans>
