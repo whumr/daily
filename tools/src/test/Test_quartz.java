@@ -9,6 +9,8 @@ import org.quartz.Trigger;
 import org.quartz.TriggerBuilder;
 import org.quartz.impl.StdSchedulerFactory;
 
+import test.ext.MyJob;
+
 /**
  * 使用2.02版本
  * 其中JobDetail是个接口

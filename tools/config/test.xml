@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/aop 
+			http://www.springframework.org/schema/aop/spring-aop-2.5.xsd 
+			http://www.springframework.org/schema/context
+			http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="a" class="test.ext.A" />
+	<bean id="p1" class="test.ext.P1" />
+	<bean id="p2" class="test.ext.P2" />
+	<bean id="p3" class="test.ext.P3" />
+
+	<aop:config>
+		<aop:aspect id="d3" ref="p3" order="10">
+			<aop:pointcut id="target3" expression="execution(* test.ext.A.x())" />
+			<aop:before method="p3" pointcut-ref="target3" />
+		</aop:aspect>
+		<aop:aspect id="d1" ref="p1" order="3">
+			<aop:pointcut id="target1" expression="execution(* test.ext.A.x())" />
+			<aop:before method="p1" pointcut-ref="target1" />
+		</aop:aspect>
+		<aop:aspect id="d2" ref="p2" order="2">
+			<aop:pointcut id="target2" expression="execution(* test.ext.A.x())" />
+			<aop:before method="p2" pointcut-ref="target2" />
+		</aop:aspect>
+		<aop:aspect id="d4" ref="p2" order="11">
+			<aop:pointcut id="target4" expression="execution(* test.ext.A.x())" />
+			<aop:after method="p2" pointcut-ref="target4" />
+		</aop:aspect>
+	</aop:config> 
+	
+</beans>
