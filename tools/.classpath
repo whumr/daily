@@ -14,5 +14,7 @@
 	<classpathentry kind="lib" path="lib/aspectjrt.jar"/>
 	<classpathentry kind="lib" path="lib/aspectjweaver.jar"/>
 	<classpathentry kind="lib" path="lib/cglib-nodep-2.2.2.jar"/>
+	<classpathentry kind="lib" path="lib/apns4j.jar"/>
+	<classpathentry kind="lib" path="lib/json-simple-1.1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
