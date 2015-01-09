@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">  
+<configuration>  
+    <typeAliases>
+        <typeAlias alias="Album" type="com.mr.hualvtu.entity.Album"/>
+        <typeAlias alias="Comments" type="com.mr.hualvtu.entity.Comments"/>
+        <typeAlias alias="Country" type="com.mr.hualvtu.entity.Country"/>
+        <typeAlias alias="Dest" type="com.mr.hualvtu.entity.Dest"/>
+        <typeAlias alias="Imgs" type="com.mr.hualvtu.entity.Imgs"/>
+        <typeAlias alias="Land" type="com.mr.hualvtu.entity.Land"/>
+        <typeAlias alias="Poi" type="com.mr.hualvtu.entity.Poi"/>
+        <typeAlias alias="User" type="com.mr.hualvtu.entity.User"/>
+    </typeAliases>
+      
+    <mappers>  
+        <mapper resource="sqlmap/Album.xml" />
+        <mapper resource="sqlmap/CommeNts.xml" />
+        <mapper resource="sqlmap/Country.xml" />
+        <mapper resource="sqlmap/Dest.xml" />
+        <mapper resource="sqlmap/Imgs.xml" />
+        <mapper resource="sqlmap/Land.xml" />
+        <mapper resource="sqlmap/Poi.xml" />
+        <mapper resource="sqlmap/User.xml" />
+    </mappers>
+</configuration>  

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="album">
+	<sql id="Base_Column_List">
+		id, user_id, dest_id, poi_id, name, title_img, create_date, up_count,
+		view_count,
+		comment_count, music_name, music_url, last_updated
+	</sql>
+	<insert id="insert" parameterType="Album">
+		insert into album (id, user_id, dest_id,
+		poi_id, name, title_img,
+		create_date, up_count, view_count,
+		comment_count, music_name, music_url,
+		last_updated)
+		values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER},
+		#{destId,jdbcType=INTEGER},
+		#{poiId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{titleImg,jdbcType=VARCHAR},
+		#{createDate,jdbcType=TIMESTAMP}, #{upCount,jdbcType=INTEGER},
+		#{viewCount,jdbcType=INTEGER},
+		#{commentCount,jdbcType=INTEGER}, #{musicName,jdbcType=VARCHAR}, #{musicUrl,jdbcType=VARCHAR},
+		#{lastUpdated,jdbcType=TIMESTAMP})
+	</insert>
+	<insert id="batchInsert" parameterType="java.util.List">
+		insert into album (id, user_id, dest_id,
+		poi_id, name, title_img,
+		create_date, up_count, view_count,
+		comment_count, music_name, music_url,
+		last_updated)
+		values
+		<foreach collection="list" item="item" index="index" separator=",">
+			(#{item.id,jdbcType=INTEGER}, #{item.userId,jdbcType=INTEGER}, #{item.destId,jdbcType=INTEGER},
+			#{item.poiId,jdbcType=INTEGER}, #{item.name,jdbcType=VARCHAR},
+			#{item.titleImg,jdbcType=VARCHAR},
+			#{item.createDate,jdbcType=TIMESTAMP}, #{item.upCount,jdbcType=INTEGER}, #{item.viewCount,jdbcType=INTEGER},
+			#{item.commentCount,jdbcType=INTEGER}, #{item.musicName,jdbcType=VARCHAR},
+			#{item.musicUrl,jdbcType=VARCHAR},
+			#{item.lastUpdated,jdbcType=TIMESTAMP})
+		</foreach>
+	</insert>
+	<update id="updateByPrimaryKey" parameterType="Album">
+		update album
+		set user_id = #{userId,jdbcType=INTEGER},
+		dest_id = #{destId,jdbcType=INTEGER},
+		poi_id = #{poiId,jdbcType=INTEGER},
+		name = #{name,jdbcType=VARCHAR},
+		title_img = #{titleImg,jdbcType=VARCHAR},
+		create_date = #{createDate,jdbcType=TIMESTAMP},
+		up_count = #{upCount,jdbcType=INTEGER},
+		view_count = #{viewCount,jdbcType=INTEGER},
+		comment_count = #{commentCount,jdbcType=INTEGER},
+		music_name = #{musicName,jdbcType=VARCHAR},
+		music_url = #{musicUrl,jdbcType=VARCHAR},
+		last_updated = #{lastUpdated,jdbcType=TIMESTAMP}
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+</mapper>

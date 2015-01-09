@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="dest">
+	<insert id="insert" parameterType="Dest">
+		insert into dest (id, name, country_id, description, title_album_id,
+		last_updated)
+		values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR},
+		#{countryId,jdbcType=INTEGER},
+		#{description,jdbcType=VARCHAR}, #{titleAlbumId,jdbcType=INTEGER}, #{lastUpdated,jdbcType=TIMESTAMP})
+	</insert>
+	<insert id="batchInsert" parameterType="java.util.List">
+		insert into dest (id, name, country_id, description, title_album_id,
+		last_updated)
+		values
+		<foreach collection="list" item="item" index="index"
+			separator=",">
+			(#{item.id,jdbcType=INTEGER}, #{item.name,jdbcType=VARCHAR}, #{item.countryId,jdbcType=INTEGER},
+			#{item.description,jdbcType=VARCHAR}, #{item.titleAlbumId,jdbcType=INTEGER},
+			#{item.lastUpdated,jdbcType=TIMESTAMP})
+		</foreach>
+	</insert>
+</mapper>
