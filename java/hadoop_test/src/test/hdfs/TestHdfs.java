@@ -9,31 +9,27 @@ import org.apache.hadoop.fs.FSDataOutputStream;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 
-
 public class TestHdfs {
+	
+	static String uri = "hdfs://192.168.9.11:9001/";
+	static Configuration conf = new Configuration();
+	static FileSystem fs;
+	static {
+		try {
+			fs = FileSystem.get(URI.create(uri), conf);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 
 	public static void main(String[] args) throws IOException {
-		
-		if (args.length == 1)
-			read(args[0]);
-		else if (args.length > 1) {
-			StringBuilder sb = new StringBuilder();
-			for (int i = 1; i < args.length; i++) {
-				sb.append(args[i]).append("\n");
-			}
-			write(args[0], sb.toString());
-		}
-		
-		
+		String path = "/test/test.txt", content = "this is a test txt";
+		write(path, content);
+		read(path);
 	}
 	
 	static void read(String path) throws IOException {
-		String hadoop_path = "hdfs://hadoop:9001/" + path;  
-        
-        Configuration conf = new Configuration();  
-        FileSystem fs = FileSystem.get(URI.create(hadoop_path), conf);  
-        Path p = new Path(hadoop_path);  
-        FSDataInputStream in = fs.open(p);
+        FSDataInputStream in = fs.open(new Path(path));
         StringBuilder sb = new StringBuilder();
         byte[] bs = new byte[10240];
         int length;
@@ -46,15 +42,12 @@ public class TestHdfs {
 
 	static void write(String path, String content) throws IOException {
 		byte[] buff = content.getBytes();  
-        String hadoop_path = "hdfs://hadoop:9001/" + path;  
-          
-        Configuration conf = new Configuration();  
-        FileSystem fs = FileSystem.get(URI.create(hadoop_path), conf);  
-        Path p = new Path(hadoop_path);  
+        Path p = new Path(path);  
         FSDataOutputStream out = fs.create(p);  
         //控制复本数量-wt  
         fs.setReplication(p, (short) 1);  
         out.write(buff);  
+        out.flush();
         out.close();  
 	}
 }
