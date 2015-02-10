@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<title>添加博客</title>
+		<script type="text/javascript" src="/js/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/jquery.validate.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){  
+				$('#nav_blog_add').addClass('active');
+				$("#add_form").validate({  
+					rules:{title:{required:true,minlength:2},content:"required"},
+					messages:{title:{required: "title不能为空",minlength: "title长度不能少于2个字节"},content: "content不能为空"}
+				});  
+			});
+		</script>
+  
+	</head>
+<body>
+	<include file="Public/header" />
+
+	<div class="container">
+		<form class="form-horizontal" id="add_form" action="do_add" method="post">
+			<div class="form-group">
+				<div class="col-sm-offset-4 col-sm-3">
+					<h2>添加博客</h2>
+				</div>
+			</div>
+			<present name="error">
+				<div class="form-group">
+					<div class="col-sm-offset-4 col-sm-3">
+						<label class="error">{$error}</label>
+					</div>
+				</div>
+			</present>
+			<div class="form-group">
+				<label class="col-md-offset-2 col-sm-2 control-label">标题</label>
+				<div class="col-sm-3">
+					<input type="text" class="form-control" id="title" name="title" value="{$blog.title}" placeholder="博客标题" autocomplete="off">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-offset-2 col-sm-2 control-label">内容</label>
+				<div class="col-sm-3">
+					<input type="text" class="form-control" id="content" name="content" value="{$blog.content}" placeholder="博客内容" autocomplete="off">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-4 col-sm-1">
+					<button type="submit" class="btn btn-default">确定</button>
+				</div>
+				<div class="col-sm-1">
+					<button type="button" class="btn btn-default" onclick="window.location.href = '/'">取消</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+
+</body>
+</html>

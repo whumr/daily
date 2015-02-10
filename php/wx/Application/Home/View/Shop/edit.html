@@ -1,0 +1,75 @@
+<script type="text/javascript">
+	function success_call() {
+		$("#add_form").validate({  
+			rules:{name:{required:true},tags:"required"},
+			messages:{name:{required: "店铺名不能为空"},tags: "标签不能为空"},
+			submitHandler:save_shop 
+		});  
+	}
+	
+	function save_shop() {
+	 	$('#submit_button').button('loading');
+		$.ajax({url:'/shop/save',type:'post',dataType:'json',data:$('#add_form').serialize(),
+			error:function() {
+				$('#submit_button').button('reset');
+			},
+            success:function(data) {
+            	if(data.status)
+            		show_msg(true, '保存成功！');
+        		else
+        			show_msg(false, data.error);
+    			$('#submit_button').button('reset');
+            }
+        });
+	}
+</script>
+  
+
+<form class="form-horizontal" id="add_form" action="" method="post">
+	<input type="hidden" id="id" name="id" value="{$shop.id}">
+	<div class="form-group">
+		<div class="col-sm-4">
+			<h4>店铺信息</h4>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">名称</label>
+		<div class="col-sm-4">
+			<input type="text" class="form-control" id="name" name="name" value="{$shop.name}" placeholder="店铺名称" autocomplete="off">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">类别</label>
+		<div class="col-sm-2">
+			<select class="form-control" id="category1">
+				<option value="">请选择</option>
+			</select>
+		</div>
+		<div class="col-sm-2">
+			<select class="form-control" id="category2">
+				<option value="">请选择</option>
+			</select>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">标签</label>
+		<div class="col-sm-4">
+			<input type="text" class="form-control" id="tags" name="tags" value="{$shop.tags}" placeholder="店铺标签,多个标签用逗号分隔,限3个">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">内容</label>
+		<div class="col-sm-4">
+			<textarea class="form-control" id="description" name="description" 
+				placeholder="店铺描述" rows="3">{$shop.description}</textarea>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-2">
+			<button type="submit" id="submit_button" class="btn btn-default" data-loading-text="保存中...">确定</button>
+		</div>
+		<div class="col-sm-1">
+			<button type="button" class="btn btn-default" onclick="window.location.href = '/admin'">取消</button>
+		</div>
+	</div>
+</form>

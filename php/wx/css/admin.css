@@ -1,0 +1,270 @@
+body {
+    font-family: Lato;
+}
+/**
+ * 	二级导航
+ */
+#in-sub-nav {
+	background-color: #333333;
+	-moz-box-shadow: inset 0px 0px 10px #111111;
+	-webkit-box-shadow: inset 0px 0px 10px #111111;
+	box-shadow: inset 0px 0px 10px #111111;
+	margin-top: -20px;
+}
+#in-sub-nav ul {
+	text-align: center;
+}
+#in-sub-nav li {
+	list-style-type: none;
+	display: inline-block;
+}
+#in-sub-nav li a {
+	display: block;
+	border-radius: 6px;
+	padding: 15px 10px 5px;
+	min-height: 56px;
+	min-width: 64px;
+	margin: 0px 10px;
+	color: #FFF;
+	font-weight: 100;
+}
+#in-sub-nav li a:hover, #in-sub-nav li a.active {
+	background-color: #555;
+	text-decoration: none;
+}
+#in-sub-nav li span.label.pull-right {
+	position: relative;
+	top: 24px;
+	right: 14px;
+}
+/**
+ * 	导航图标
+ */
+.batch {
+    background-image: url("img/white-batch-32.png");
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+}
+.home {
+    background-position: -128px -96px;
+}
+.stream {
+    background-position: 0 -64px;
+}
+.plane {
+    background-position: -256px -96px;
+}
+.calendar {
+    background-position: -160px -128px;
+}
+.quill {
+    background-position: -288px 0;
+}
+.forms {
+    background-position: -96px -32px;
+}
+.users {
+    background-position: 0 -96px;
+}
+.settings {
+    background-position: -288px -128px;
+}
+
+/*
+ * 左边菜单
+ */
+
+.sidebar {
+	border-top: 1px solid #EEE;
+}
+.sidebar ul {
+	padding: 0;
+	margin: 0;
+}
+.sidebar ul li {
+	list-style-type: none;
+}
+.sidebar ul li a {
+	display: block;
+	padding: 10px;
+	border-bottom: 1px solid #EEE;
+	text-transform: uppercase;
+}
+.sidebar ul li a:hover {
+	background-color: #EEE;
+	text-decoration: none;
+}
+.sidebar ul li ul {
+	background-color: #F6F6F6;
+	box-shadow: inset 0 1px 10px #E0E0E0;
+}
+/* ============== stat lists ============== */
+
+ul.stat-list {
+	margin: 0;
+}
+ul.stat-list li {
+	list-style-type: none;
+}
+ul.stat-list li label, ul.stat-list li h4, ul.stat-list li small, ul.stat-list li p {
+	display: inline-block;
+}
+ul.stat-list li label {
+	height: 32px;
+	width: 32px;
+	border-radius: 2px;
+	text-align: center;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+ul.stat-list li label i {
+	margin-top: 8px;
+}
+ul.stat-list li h4 {
+	font-weight: 600;
+	margin-right: 10px;
+	min-width: 30px;
+}
+ul.stat-list li h4.sub {
+	color: #999;
+	font-weight: 300;
+}
+
+/* ============== peity ============== */
+.peity {
+	margin-bottom: 20px;
+}
+.peity canvas {
+	margin-right: 10px;
+}
+.peity h4 {
+	display: inline-block;
+	font-weight: 600;
+	min-width: 30px;
+	margin: 0;
+}
+.peity h4.sub {
+	font-weight: 300;
+	color: #999;
+}
+
+/* ============== sparks ============== */
+.spark {
+	margin-bottom: 20px;
+}
+.spark h4 {
+	font-weight: 500;
+}
+.spark h4.sub {
+	color: #999;
+	font-weight: 300;
+}
+.spark h4.sub span.minus {
+	color: #ea494a;
+	float: right;
+}
+.spark h4.sub span.plus {
+	color: #4cb158;
+	float: right;
+}
+.spark .sparklines {
+	float: right;
+}
+
+/* ============== panels ============== */
+.panel {
+	width: 150px;
+	background-color: #EEE;
+	border-radius: 6px;
+	text-align: center;
+	display: inline-block;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+.panel .top {
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	background-color: #555555;
+	padding-top: 20px;
+}
+.panel .top i {
+	display: block;
+	margin: 0px auto 20px;
+}
+.panel .top h6 {
+	display: inline;
+	background-color: #555555;
+	position: relative;
+	top: 5px;
+	padding: 6px 12px;
+	border-radius: 30px;
+	color: #FFF;
+	font-weight: 600;
+	font-size: 0.7em;
+}
+.panel .bottom {
+	padding-top: 20px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	text-align: center;
+	border-top: none;
+}
+.panel .bottom h2 {
+	font-weight: 600;
+	margin: 0;
+}
+.panel .bottom h6 {
+	font-size: 0.7em;
+	font-weight: 600;
+	position: relative;
+	bottom: 10px;
+	color: #555555;
+}
+.panel .warning, .panel .warning h6 {
+	background-color: #ffa93c;
+}
+.panel .success, .panel .success h6 {
+	background-color: #4cb158;
+}
+.panel .danger, .panel .danger h6 {
+	background-color: #ea494a;
+}
+.panel .info, .panel .info h6 {
+	background-color: #14b8d4;
+}
+.panel .primary, .panel .primary h6 {
+	background-color: #007ccd;
+}
+.panel .purple, .panel .purple h6 {
+	background-color: #7932ea;
+}
+
+
+/**
+ * 	图标
+ */
+.batch-big {
+	background-image: url("img/white-batch-64.png");
+	display: inline-block;
+	height: 64px;
+	width: 64px;
+}
+.b-wifi {
+	background-position: -256px -64px;
+}
+.b-code {
+	background-position: -64px 0px;
+}
+.b-comment {
+	background-position: -192px -256px;
+}
+.b-flag {
+	background-position: -384px -256px;
+}
+.b-database {
+	background-position: -256px 0px;
+}
+.b-alarm {
+	background-position: -384px 0px;
+}
